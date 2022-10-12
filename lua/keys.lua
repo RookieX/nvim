@@ -1,4 +1,4 @@
-local map = vim.api.nvim_set_keymap
+local set = vim.keymap.set
 local opt = {noremap = true, silent = true }
-map("n", "<F1>", ":NvimTreeToggle<CR>", opt)
-map("n", "<F3>", ":NvimTreeFindFile<CR>", opt)
+set("n", "<F1>", ":NvimTreeToggle<CR>", opt)
+set("n", "<F3>", ":NvimTreeFindFile<CR>", opt)
