@@ -38,3 +38,12 @@ vim.wo.foldlevel = 99
 vim.g.colorscheme = "github_*"
 
 vim.g.python3_host_prog = "~/.virtualenvs/p3/bin/python"
+
+
+-- last edit position
+vim.cmd([[
+  augroup basic
+    autocmd!
+    autocmd BufReadPost * if line("'\"") >= 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+  augroup end
+]])
