@@ -14,6 +14,12 @@ require('packer').startup(function(use)
             'nvim-tree/nvim-web-devicons', -- optional, for file icons
         },
     }
+
+    -- color schema
+    use {
+        "catppuccin/nvim",
+        as = "catppuccin",
+    }
 end)
 
 vim.cmd([[
