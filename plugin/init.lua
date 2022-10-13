@@ -4,7 +4,9 @@ vim.cmd [[packadd packer.nvim]]
 require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
-    
+    use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
+    use { "williamboman/mason.nvim" } -- lsp installer
+   
     -- explore
     use {
         'nvim-tree/nvim-tree.lua',
