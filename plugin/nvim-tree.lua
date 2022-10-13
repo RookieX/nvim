@@ -7,7 +7,6 @@ require("nvim-tree").setup({
     open_on_tab = true,
     focus_empty_on_setup = true,
     hijack_cursor =  true,
-    select_prompts = true,
 
     diagnostics = {
         enable = true,
