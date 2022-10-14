@@ -40,6 +40,7 @@ require("catppuccin").setup({
     },
 
     custom_highlights = {
+        LineNr = { fg = "#99ff66" },
         Comment = { fg = "#7d7d7d" },
         TSConstBuiltin = { fg = colors.peach, style = {} },
         TSConstant = { fg = colors.sky },
