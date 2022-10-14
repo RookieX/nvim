@@ -6,7 +6,7 @@ require("nvim-tree").setup({
     open_on_setup_file = false,
     open_on_tab = true,
     focus_empty_on_setup = true,
-    hijack_cursor =  true,
+    hijack_cursor = true,
 
     diagnostics = {
         enable = true,
@@ -25,6 +25,10 @@ require("nvim-tree").setup({
                 git = true,
             }
         }
+    },
+
+    filters = {
+        dotfiles = true,
     },
 
     live_filter = {
