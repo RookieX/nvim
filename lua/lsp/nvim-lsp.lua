@@ -17,13 +17,19 @@ function C.on_attach(client, bufnr)
     vim.keymap.set('n', 'ga', vim.lsp.buf.code_action, bufopts)
     vim.keymap.set('n', 'gs', vim.lsp.buf.signature_help, bufopts)
     vim.keymap.set('n', 'gk', vim.lsp.buf.hover, bufopts)
-    vim.keymap.set('n', 'ƒ', function() vim.lsp.buf.format { async = true } end, bufopts) -- option + F
-    vim.keymap.set('n', 'gf', function() vim.lsp.buf.format { async = true } end, bufopts)
+    vim.keymap.set('n', 'ƒ', function() vim.lsp.buf.format { async = false } end, bufopts) -- option + F
+    vim.keymap.set('n', 'gf', function() vim.lsp.buf.format { async = false } end, bufopts)
     -- vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, bufopts)
     -- vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, bufopts)
     -- vim.keymap.set('n', '<space>wl', function()
     --     print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
     -- end, bufopts)
+end
+
+local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+
+function C.capabilities()
+    return capabilities
 end
 
 return C
