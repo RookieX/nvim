@@ -6,6 +6,7 @@ require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
     use { "williamboman/mason.nvim" } -- lsp installer
+    use 'airblade/vim-gitgutter' -- git
 
     -- completions
     -- use {'neoclide/coc.nvim', branch = 'release'}
