@@ -5,7 +5,7 @@ require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
     use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
-    use { "williamboman/mason.nvim" } -- lsp installer
+    use "williamboman/mason.nvim" -- lsp installer
     use 'airblade/vim-gitgutter' -- git
 
     -- completions
@@ -28,6 +28,8 @@ require('packer').startup(function(use)
     use 'rafamadriz/friendly-snippets'
     use 'onsails/lspkind-nvim'
     -- completions
+
+    use 'j-hui/fidget.nvim' -- Standalone UI for nvim-lsp progress
 
     -- explore
     use {
