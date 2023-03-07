@@ -50,6 +50,11 @@ require('packer').startup(function(use)
         "catppuccin/nvim",
         as = "catppuccin",
     }
+
+    -- auto pairs
+    use {
+        "windwp/nvim-autopairs",
+    }
 end)
 
 vim.cmd([[
