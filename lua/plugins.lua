@@ -60,6 +60,12 @@ require('packer').startup(function(use)
     use {
         'nvim-treesitter/nvim-treesitter',
     }
+
+    -- status line
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
 end)
 
 vim.cmd([[
