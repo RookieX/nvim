@@ -55,6 +55,11 @@ require('packer').startup(function(use)
     use {
         "windwp/nvim-autopairs",
     }
+
+    -- treesitter
+    use {
+        'nvim-treesitter/nvim-treesitter',
+    }
 end)
 
 vim.cmd([[
