@@ -5,7 +5,8 @@ require('lualine').setup {
             tabline = { 'NvimTree' }, -- only ignores the ft for statusline.
             winbar = { 'NvimTree' }, -- only ignores the ft for winbar.
         },
-        ignore_focus = { 'NvimTree' }
+        ignore_focus = { 'NvimTree' },
+        globalstatus = true,
     },
 
     sections = {
@@ -20,12 +21,12 @@ require('lualine').setup {
     tabline = {
     },
 
-    winbar = {
-        lualine_a = {},
-        lualine_b = {},
-        lualine_c = { { 'filename', path = 1 } },
-        lualine_x = {},
-        lualine_y = {},
-        lualine_z = {}
-    },
+    --winbar = {
+    --    lualine_a = {},
+    --    lualine_b = {},
+    --    lualine_c = { { 'filename', path = 1 } },
+    --    lualine_x = {},
+    --    lualine_y = {},
+    --    lualine_z = {}
+    --},
 }
