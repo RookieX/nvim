@@ -73,6 +73,11 @@ require('packer').startup(function(use)
         tag = "v3.*",
         requires = 'nvim-tree/nvim-web-devicons' 
     }
+
+    -- cursor
+    use {
+        'RRethy/vim-illuminate'
+    }
 end)
 
 vim.cmd([[
