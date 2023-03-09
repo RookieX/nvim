@@ -20,6 +20,9 @@ require('telescope').setup({
     pickers = {
         find_files = {
             theme = "ivy",
+        },
+        live_grep = {
+            theme = "ivy",
         }
         -- Default configuration for builtin pickers goes here:
         -- picker_name = {

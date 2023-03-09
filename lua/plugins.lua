@@ -64,7 +64,7 @@ require('packer').startup(function(use)
     -- status line
     use {
         'nvim-lualine/lualine.nvim',
-        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
 
     -- tab line
@@ -84,6 +84,19 @@ require('packer').startup(function(use)
         "folke/trouble.nvim",
         requires = "nvim-tree/nvim-web-devicons",
     }
+
+    use({
+        "folke/noice.nvim",
+        requires = {
+            -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+            "MunifTanjim/nui.nvim",
+            -- OPTIONAL:
+            --   `nvim-notify` is only needed, if you want to use the notification view.
+            --   If not available, we use `mini` as the fallback
+            "rcarriga/nvim-notify",
+            "nvim-tree/nvim-web-devicons",
+        }
+    })
 end)
 
 vim.cmd([[

@@ -1,5 +1,6 @@
 require("bufferline").setup {
     options = {
+        mode = "buffers",
         numbers = "ordinal",
         indicator = {
             style = 'underline',
@@ -11,7 +12,7 @@ require("bufferline").setup {
                 filetype = "NvimTree",
                 text = "File Explorer",
                 text_align = "left",
-                separator = true
+                separator = false
             }
         },
     }
