@@ -71,12 +71,18 @@ require('packer').startup(function(use)
     use {
         'akinsho/bufferline.nvim',
         tag = "v3.*",
-        requires = 'nvim-tree/nvim-web-devicons' 
+        requires = 'nvim-tree/nvim-web-devicons'
     }
 
     -- cursor
     use {
         'RRethy/vim-illuminate'
+    }
+
+    -- diagnostic
+    use {
+        "folke/trouble.nvim",
+        requires = "nvim-tree/nvim-web-devicons",
     }
 end)
 
