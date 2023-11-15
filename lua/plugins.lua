@@ -85,6 +85,10 @@ require('packer').startup(function(use)
         requires = "nvim-tree/nvim-web-devicons",
     }
 
+    use {
+        "github/copilot.vim"
+    }
+
     use({
         "folke/noice.nvim",
         requires = {
