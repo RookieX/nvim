@@ -1,9 +1,9 @@
 require('lualine').setup {
     options = {
-        disabled_filetypes = { -- Filetypes to disable lualine for.
+        disabled_filetypes = {           -- Filetypes to disable lualine for.
             statusline = { 'NvimTree' }, -- only ignores the ft for statusline.
-            tabline = { 'NvimTree' }, -- only ignores the ft for statusline.
-            winbar = { 'NvimTree' }, -- only ignores the ft for winbar.
+            tabline = { 'NvimTree' },    -- only ignores the ft for statusline.
+            winbar = { 'NvimTree' },     -- only ignores the ft for winbar.
         },
         ignore_focus = { 'NvimTree' },
         globalstatus = true,

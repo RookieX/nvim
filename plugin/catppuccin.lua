@@ -3,10 +3,10 @@ local colors = require("catppuccin.palettes").get_palette()
 require("catppuccin").setup({
     term_colors = true,
     dim_inactive = {
-		enabled = true,
-		shade = "light",
-		percentage = 0.9,
-	},
+        enabled = true,
+        shade = "light",
+        percentage = 0.9,
+    },
     styles = {
         comments = { "italic", "bold" },
     },

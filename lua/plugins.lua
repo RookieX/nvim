@@ -1,30 +1,30 @@
 local plugins = {
-    {'neovim/nvim-lspconfig'}, -- Configurations for Nvim LSP
-    {"williamboman/mason.nvim"}, -- lsp installer
-    {'airblade/vim-gitgutter'}, -- git
+    { 'neovim/nvim-lspconfig' },   -- Configurations for Nvim LSP
+    { "williamboman/mason.nvim" }, -- lsp installer
+    { 'airblade/vim-gitgutter' },  -- git
 
     -- completions
     -- {'neoclide/coc.nvim', branch = 'release'}
-    {'hrsh7th/cmp-nvim-lsp'},
-    {'hrsh7th/cmp-buffer'},
-    {'hrsh7th/cmp-path'},
-    {'hrsh7th/cmp-cmdline'},
-    {'hrsh7th/cmp-nvim-lua'},
-    {'hrsh7th/nvim-cmp'},
+    { 'hrsh7th/cmp-nvim-lsp' },
+    { 'hrsh7th/cmp-buffer' },
+    { 'hrsh7th/cmp-path' },
+    { 'hrsh7th/cmp-cmdline' },
+    { 'hrsh7th/cmp-nvim-lua' },
+    { 'hrsh7th/nvim-cmp' },
     {
         'hrsh7th/cmp-vsnip',
-        dependencies= {
+        dependencies = {
             'hrsh7th/cmp-nvim-lsp',
         }
     },
-    {'hrsh7th/vim-vsnip'},
-    {'saadparwaiz1/cmp_luasnip'},
-    {'L3MON4D3/LuaSnip'},
-    {'rafamadriz/friendly-snippets'},
-    {'onsails/lspkind-nvim'},
+    { 'hrsh7th/vim-vsnip' },
+    { 'saadparwaiz1/cmp_luasnip' },
+    { 'L3MON4D3/LuaSnip' },
+    { 'rafamadriz/friendly-snippets' },
+    { 'onsails/lspkind-nvim' },
     -- completions
 
-    { 'j-hui/fidget.nvim'}, -- Standalone UI for nvim-lsp progress
+    { 'j-hui/fidget.nvim' }, -- Standalone UI for nvim-lsp progress
 
     -- explore
     {
@@ -37,7 +37,7 @@ local plugins = {
     {
         'nvim-telescope/telescope.nvim',
         branch = '0.1.x',
-        dependencies = {  'nvim-lua/plenary.nvim' } 
+        dependencies = { 'nvim-lua/plenary.nvim' }
     },
 
     -- color schema
@@ -67,18 +67,18 @@ local plugins = {
     {
         'akinsho/bufferline.nvim',
         version = "*",
-        dependencies= {'nvim-tree/nvim-web-devicons'}
+        dependencies = { 'nvim-tree/nvim-web-devicons' }
     },
 
     -- cursor
     --[[{
         'RRethy/vim-illuminate'
-    },]]--
+    },]] --
 
     -- diagnostic
     {
         "folke/trouble.nvim",
-        dependencies= {"nvim-tree/nvim-web-devicons"},
+        dependencies = { "nvim-tree/nvim-web-devicons" },
     },
 
     {
@@ -88,7 +88,7 @@ local plugins = {
     {
         "folke/noice.nvim",
         event = "VeryLazy",
-        dependencies= {
+        dependencies = {
             -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
             "MunifTanjim/nui.nvim",
             -- OPTIONAL:
@@ -99,4 +99,4 @@ local plugins = {
     },
 }
 
-require('lazy').setup(plugins,{})
+require('lazy').setup(plugins, {})
