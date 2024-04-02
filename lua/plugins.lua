@@ -24,6 +24,12 @@ local plugins = {
     { 'onsails/lspkind-nvim' },
     -- completions
 
+    -- signature
+    {
+        "ray-x/lsp_signature.nvim",
+        event = "VeryLazy",
+    },
+
     { 'j-hui/fidget.nvim' }, -- Standalone UI for nvim-lsp progress
 
     -- explore
