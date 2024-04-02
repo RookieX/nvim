@@ -103,6 +103,10 @@ local plugins = {
             "rcarriga/nvim-notify",
         }
     },
+
+    {
+        "smjonas/inc-rename.nvim"
+    },
 }
 
 require('lazy').setup(plugins, {})
