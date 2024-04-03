@@ -77,9 +77,9 @@ local plugins = {
     },
 
     -- cursor
-    --[[{
+    {
         'RRethy/vim-illuminate'
-    },]] --
+    },
 
     -- diagnostic
     {
