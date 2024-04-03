@@ -106,7 +106,10 @@ local plugins = {
 
     -- rename
     {
-        "smjonas/inc-rename.nvim"
+        "smjonas/inc-rename.nvim",
+        config = function()
+            require("inc_rename").setup()
+        end,
     },
 
     { 'akinsho/toggleterm.nvim' },
