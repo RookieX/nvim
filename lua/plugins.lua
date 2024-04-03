@@ -104,17 +104,20 @@ local plugins = {
         }
     },
 
+    -- rename
     {
         "smjonas/inc-rename.nvim"
     },
 
-    {
-        "hedyhli/outline.nvim",
-        lazy = true,
-        cmd = { "Outline", "OutlineOpen" },
-    },
+    { 'akinsho/toggleterm.nvim' },
 
-    { 'akinsho/toggleterm.nvim' }
+    {
+        'nvimdev/lspsaga.nvim',
+        event = 'LspAttach',
+        config = function()
+            require('lspsaga').setup({})
+        end,
+    },
 }
 
 require('lazy').setup(plugins, {})
