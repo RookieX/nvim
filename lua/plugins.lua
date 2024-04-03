@@ -113,6 +113,8 @@ local plugins = {
         lazy = true,
         cmd = { "Outline", "OutlineOpen" },
     },
+
+    { 'akinsho/toggleterm.nvim' }
 }
 
 require('lazy').setup(plugins, {})

@@ -12,4 +12,6 @@ set("n", "gT", ":BufferLineCyclePrev<CR>", opt)
 set('n', '<C-T>', ":Telescope find_files<CR>", opt)
 set('n', '<C-L>', ":Telescope live_grep<CR>", opt)
 
+set('n', "<C-\\>\\", ":ToggleTerm direction=float<CR>", opt)
+
 set("n", "go", "<cmd>Outline<CR>", opt)
