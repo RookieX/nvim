@@ -107,6 +107,12 @@ local plugins = {
     {
         "smjonas/inc-rename.nvim"
     },
+
+    {
+        "hedyhli/outline.nvim",
+        lazy = true,
+        cmd = { "Outline", "OutlineOpen" },
+    },
 }
 
 require('lazy').setup(plugins, {})
