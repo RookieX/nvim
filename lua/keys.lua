@@ -14,4 +14,4 @@ set('n', '<C-L>', ":Telescope live_grep<CR>", opt)
 
 set('n', "<C-\\>\\", ":ToggleTerm direction=float<CR>", opt)
 
-set("n", "go", "<cmd>Outline<CR>", opt)
+set("n", "go", "<cmd>Lspsaga outline<CR>", opt)
