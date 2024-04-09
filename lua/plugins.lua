@@ -112,15 +112,8 @@ local plugins = {
         end,
     },
 
+    -- terminal
     { 'akinsho/toggleterm.nvim' },
-
-    {
-        'nvimdev/lspsaga.nvim',
-        event = 'LspAttach',
-        config = function()
-            require('lspsaga').setup({})
-        end,
-    },
 }
 
 require('lazy').setup(plugins, {})
