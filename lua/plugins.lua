@@ -114,6 +114,15 @@ local plugins = {
 
     -- terminal
     { 'akinsho/toggleterm.nvim' },
+
+    -- breadcrumbs
+    {
+        'Bekaboo/dropbar.nvim',
+        -- optional, but required for fuzzy finder support
+        dependencies = {
+            'nvim-telescope/telescope-fzf-native.nvim'
+        }
+    }
 }
 
 require('lazy').setup(plugins, {})
