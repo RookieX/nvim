@@ -12,7 +12,6 @@ vim.bo.tabstop = 4
 vim.o.softtabstop = 4
 vim.bo.softtabstop = 4
 vim.o.shiftround = true
-vim.bo.shiftround = true
 vim.o.shiftwidth = 4
 vim.bo.shiftwidth = 4
 vim.o.expandtab = true
@@ -23,13 +22,9 @@ vim.o.smartindent = true
 vim.bo.smartindent = true
 
 vim.o.ignorecase = true
-vim.bo.ignorecase = true
 vim.o.smartcase = true
-vim.bo.smartcase = true
 vim.o.hlsearch = true
-vim.bo.hlsearch = true
 vim.o.incsearch = true
-vim.bo.incsearch = true
 
 vim.opt.termguicolors = true
 vim.o.showmode = false
