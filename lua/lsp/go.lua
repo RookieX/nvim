@@ -29,10 +29,10 @@ function go_org_imports(wait_ms)
     end
 end
 
-vim.cmd([[
-  augroup gopls
-    autocmd!
-    autocmd BufWritePre *.go lua vim.lsp.buf.format({ sync = false })
-    autocmd BufWritePre *.go lua go_org_imports(100)
-  augroup end
-]])
+-- vim.cmd([[
+--   augroup gopls
+--     autocmd!
+--     autocmd BufWritePre *.go lua vim.lsp.buf.format({ sync = false })
+--     autocmd BufWritePre *.go lua go_org_imports(100)
+--   augroup end
+-- ]])
