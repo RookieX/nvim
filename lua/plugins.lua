@@ -22,6 +22,10 @@ local plugins = {
     { 'L3MON4D3/LuaSnip' },
     { 'rafamadriz/friendly-snippets' },
     { 'onsails/lspkind-nvim' },
+    {
+        "chrisgrieser/nvim-scissors",
+        dependencies = { "nvim-telescope/telescope.nvim", "garymjr/nvim-snippets" },
+    },
     -- completions
 
     -- signature
@@ -85,10 +89,6 @@ local plugins = {
     {
         "folke/trouble.nvim",
         dependencies = { "nvim-tree/nvim-web-devicons" },
-    },
-
-    {
-        "github/copilot.vim"
     },
 
     {
