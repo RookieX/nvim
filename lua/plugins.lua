@@ -18,13 +18,19 @@ local plugins = {
         }
     },
     { 'hrsh7th/vim-vsnip' },
-    { 'saadparwaiz1/cmp_luasnip' },
-    { 'L3MON4D3/LuaSnip' },
+    {
+        "L3MON4D3/LuaSnip",
+        version = "v2.*",
+        dependencies = { "rafamadriz/friendly-snippets" },
+        build = "make install_jsregexp"
+    },
     { 'rafamadriz/friendly-snippets' },
     { 'onsails/lspkind-nvim' },
     {
         "chrisgrieser/nvim-scissors",
-        dependencies = { "nvim-telescope/telescope.nvim", "garymjr/nvim-snippets" },
+        dependencies = {
+            "nvim-telescope/telescope.nvim",
+        },
     },
     -- completions
 
