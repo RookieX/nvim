@@ -1,10 +1,10 @@
-local nvim_lsp = require('lsp.nvim-lsp')
+local cap = require('lsp.capabilities')
 lspconfig = require "lspconfig"
 util = require "lspconfig/util"
 
-require('lspconfig').gopls.setup {
+lspconfig.gopls.setup {
     cmd = { 'gopls', '-remote=auto' },
-    capabilities = nvim_lsp.capabilities(),
+    capabilities = cap.capabilities(),
     settings = {
         gopls = {
             analyses = {

@@ -1,5 +1,5 @@
-local nvim_lsp = require('lsp.nvim-lsp')
+local cap = require('lsp.capabilities')
 
 require('lspconfig').clangd.setup {
-    capabilities = nvim_lsp.capabilities(),
+    capabilities = cap.capabilities(),
 }
