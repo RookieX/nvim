@@ -31,6 +31,9 @@ return {
             -- Scissors
             { '<leader>se', function() require("scissors").editSnippet() end, description = 'Edit snippet', opts = { silent = true } },
             { '<leader>sa', function() require("scissors").addNewSnippet() end, description = 'Add new snippet', opts = { silent = true } },
+
+            -- git
+            { '<leader>gb', function() require("gitsigns").blame() end, description = 'Git blame', opts = { silent = true } },
         }
     }
 }

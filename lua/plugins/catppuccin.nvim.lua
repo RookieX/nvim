@@ -18,7 +18,7 @@ return {
             },
             integrations = {
                 cmp = true,
-                gitsigns = true,
+                gitsigns = false,
                 nvimtree = false,
                 telescope = true,
                 treesitter = true,
