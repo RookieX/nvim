@@ -7,7 +7,6 @@ return {
     config = function()
         local colors = require("catppuccin.palettes").get_palette()
         require("catppuccin").setup({
-            term_colors = true,
             dim_inactive = {
                 enabled = true,
                 shade = "light",
@@ -19,10 +18,9 @@ return {
             integrations = {
                 cmp = true,
                 gitsigns = false,
-                nvimtree = false,
+                nvimtree = true,
                 telescope = true,
                 treesitter = true,
-                gitgutter = true,
                 dap = {
                     enabled = true,
                     enable_ui = true, -- enable nvim-dap-ui
@@ -54,6 +52,5 @@ return {
             },
         })
 
-        vim.cmd.colorscheme "catppuccin"
     end
 }
