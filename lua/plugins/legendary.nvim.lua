@@ -14,8 +14,10 @@ return {
 
             -- Telescope
             { '<C-T>', ':Telescope find_files hidden=true<CR>', description = 'Find files', opts = { silent = true } },
-            { '<C-L>', ':Telescope live_grep<CR>',              description = 'Live Grep',  opts = { silent = true } },
-            { '<leader>k', ':Telescope keymaps<CR>',              description = 'Keymaps',  opts = { silent = true } },
+            -- { '<C-L>', ':Telescope live_grep<CR>',              description = 'Live Grep',  opts = { silent = true } },
+            { '<C-L>', function() require("telescope").extensions.live_grep_args.live_grep_args() end, description = 'Live Grep Args',  opts = { silent = true } },
+            { '<leader>tt', ':Telescope ',              description = 'Telescope Command',  opts = { silent = false } },
+            { '<leader>tk', ':Telescope keymaps<CR>',              description = 'Keymaps',  opts = { silent = true } },
 
             -- Bufferline
             { 'gp', ':BufferLinePick<CR>',       description = 'Pick buffer', opts = { silent = true } },

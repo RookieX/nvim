@@ -1,9 +1,13 @@
 return {
     'nvim-telescope/telescope.nvim',
     branch = '0.1.x',
-    dependencies = { 'nvim-lua/plenary.nvim' },
+    dependencies = {
+        'nvim-lua/plenary.nvim',
+        'nvim-telescope/telescope-live-grep-args.nvim',
+    },
     config = function()
         local actions = require("telescope.actions")
+        local lga_actions = require("telescope-live-grep-args.actions")
         require("telescope").setup({
             defaults = {
                 -- Default configuration for telescope goes here:
@@ -37,6 +41,22 @@ return {
                 -- builtin picker
             },
             extensions = {
+                live_grep_args = {
+                    auto_quoting = true, -- enable/disable auto-quoting
+                    -- define mappings, e.g.
+                    mappings = { -- extend mappings
+                        i = {
+                            ["<C-q>"] = lga_actions.quote_prompt(),
+                            ["<C-i>"] = lga_actions.quote_prompt({ postfix = " --iglob " }),
+                            -- freeze the current list and start a fuzzy search in the frozen list
+                            -- ["<C-space>"] = lga_actions.to_fuzzy_refine,
+                        },
+                    },
+                    -- ... also accepts theme settings, for example:
+                    theme = "ivy", -- use dropdown theme
+                    -- theme = { }, -- use own theme spec
+                    -- layout_config = { mirror=true }, -- mirror preview pane
+                }
                 -- Your extension configuration goes here:
                 -- extension_name = {
                 --   extension_config_key = value,
