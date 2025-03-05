@@ -37,6 +37,8 @@ vim.wo.foldmethod = 'expr'
 vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
 vim.wo.foldlevel = 99
 
+vim.o.signcolumn = "auto:3"
+
 vim.g.colorscheme = "github_*"
 
 vim.g.python3_host_prog = "~/.virtualenvs/p3/bin/python"
