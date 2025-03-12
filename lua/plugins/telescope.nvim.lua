@@ -4,6 +4,7 @@ return {
     dependencies = {
         'nvim-lua/plenary.nvim',
         'nvim-telescope/telescope-live-grep-args.nvim',
+        "nvim-telescope/telescope-ui-select.nvim"
     },
     config = function()
         local actions = require("telescope.actions")
@@ -44,7 +45,7 @@ return {
                 live_grep_args = {
                     auto_quoting = true, -- enable/disable auto-quoting
                     -- define mappings, e.g.
-                    mappings = { -- extend mappings
+                    mappings = {         -- extend mappings
                         i = {
                             ["<C-q>"] = lga_actions.quote_prompt(),
                             ["<C-i>"] = lga_actions.quote_prompt({ postfix = " --iglob " }),
@@ -56,7 +57,16 @@ return {
                     theme = "ivy", -- use dropdown theme
                     -- theme = { }, -- use own theme spec
                     -- layout_config = { mirror=true }, -- mirror preview pane
-                }
+                },
+                ["ui-select"]= {
+                    require("telescope.themes").get_dropdown {
+                        -- even more opts
+                    },
+                    specific_opts = {
+                        codeactions = true,
+                    },
+                },
+                noice = {}
                 -- Your extension configuration goes here:
                 -- extension_name = {
                 --   extension_config_key = value,
@@ -64,5 +74,7 @@ return {
                 -- please take a look at the readme of the extension you want to configure
             }
         })
+        require("telescope").load_extension("live_grep_args")
+        require("telescope").load_extension("ui-select")
     end
 }
