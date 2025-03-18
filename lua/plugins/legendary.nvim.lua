@@ -18,6 +18,8 @@ return {
             { '<C-L>', function() require("telescope").extensions.live_grep_args.live_grep_args() end, description = 'Live Grep Args',  opts = { silent = true } },
             { '<leader>tt', ':Telescope ',              description = 'Telescope Command',  opts = { silent = false } },
             { '<leader>tk', ':Telescope keymaps<CR>',              description = 'Keymaps',  opts = { silent = true } },
+            { '<leader>tb', ':Telescope buffers<CR>',              description = 'Buffers',  opts = { silent = true } },
+            { '<leader>ts', ':Telescope session-lens<CR>',              description = 'Sessoins',  opts = { silent = true } },
 
             -- Bufferline
             { 'gp', ':BufferLinePick<CR>',       description = 'Pick buffer', opts = { silent = true } },
