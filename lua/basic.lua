@@ -1,3 +1,6 @@
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
+
 vim.g.encoding = "UTF-8"
 vim.o.fileencoding = 'utf-8'
 
