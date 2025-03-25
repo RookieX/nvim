@@ -20,6 +20,7 @@ return {
             { '<leader>tk', ':Telescope keymaps<CR>',              description = 'Keymaps',  opts = { silent = true } },
             { '<leader>tb', ':Telescope buffers<CR>',              description = 'Buffers',  opts = { silent = true } },
             { '<leader>ts', ':Telescope session-lens<CR>',              description = 'Sessoins',  opts = { silent = true } },
+            { '<leader>tf', ':Telescope grep_string<CR>',              description = 'Grep string',  opts = { silent = true } },
 
             -- Bufferline
             { 'gp', ':BufferLinePick<CR>',       description = 'Pick buffer', opts = { silent = true } },

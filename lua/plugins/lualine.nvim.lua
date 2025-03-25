@@ -22,7 +22,7 @@ return {
                 end,
                 { 'filename', path = 1 }, 'searchcount'
             },
-            lualine_x = { 'encoding', 'fileformat', 'filetype', 'filesize' },
+            lualine_x = { 'encoding', 'fileformat', 'filetype', 'lsp_status', 'filesize' },
             lualine_y = { 'progress' },
             lualine_z = { 'location' }
         },
