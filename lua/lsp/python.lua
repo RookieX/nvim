@@ -1,5 +1,5 @@
 local cap = require('lsp.capabilities')
 
-require('lspconfig').pylsp.setup {
+require('lspconfig').pyright.setup {
     capabilities = cap.capabilities(),
 }
