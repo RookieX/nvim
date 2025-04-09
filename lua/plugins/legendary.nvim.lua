@@ -23,9 +23,11 @@ return {
             { '<leader>tf', ':Telescope grep_string<CR>',                                                   description = 'Grep string',                           opts = { silent = true } },
 
             -- Trouble
+            { '<leader>xt', ':Trouble ',                                                                    description = 'Trouble',                               opts = { silent = false } },
             { '<leader>xd', ':Trouble diagnostics<CR>',                                                     description = 'Trouble Diagnostics',                   opts = { silent = true } },
             { '<leader>xD', ':Trouble diagnostics toggle filter.buf=0<CR>',                                 description = 'Trouble Diagnostics of Current Buffer', opts = { silent = true } },
             { '<leader>xs', ':Trouble lsp_document_symbols<CR>',                                            description = 'Trouble lsp_document_symbols',          opts = { silent = true } },
+            { '<leader>xl', ':Trouble lsp<CR>',                                                             description = 'Trouble lsp',                           opts = { silent = true } },
 
             -- Bufferline
             { 'gp',         ':BufferLinePick<CR>',                                                          description = 'Pick buffer',                           opts = { silent = true } },

@@ -6,7 +6,6 @@ return {
         focus = true,
         modes = {
             lsp_document_symbols = {
-                auto_open = true,
                 win = {
                     position = "right"
                 },
