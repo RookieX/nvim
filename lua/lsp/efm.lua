@@ -13,7 +13,7 @@ require('lspconfig').efm.setup {
                 { formatCommand = "lua-format -i", formatStdin = true }
             },
             python = {
-                { formatCommand = "black --quiet -", formatStdin = true }
+                { formatCommand = "black --skip-string-normalization --quiet -", formatStdin = true }
             }
         }
     },
