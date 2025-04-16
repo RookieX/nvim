@@ -46,6 +46,12 @@ return {
 
             -- git
             { '<leader>gb', function() require("gitsigns").blame() end,                                     description = 'Git blame',                             opts = { silent = true } },
+
+            -- reseize
+            { '<S-h>',      ':vertical resize +1<CR>',                                                      description = 'Window Vertical Increase',              opts = { silent = true } },
+            { '<S-l>',      ':vertical resize -1<CR>',                                                      description = 'Window Vertical Decrease',              opts = { silent = true } },
+            { '<S-k>',      ':resize +1<CR>',                                                               description = 'Window Increase',                       opts = { silent = true } },
+            { '<S-j>',      ':resize -1<CR>',                                                               description = 'Window Decrease',                       opts = { silent = true } },
         }
     }
 }
