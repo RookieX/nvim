@@ -5,7 +5,6 @@ vim.g.encoding = "UTF-8"
 vim.o.fileencoding = 'utf-8'
 
 vim.o.wrap = false
-vim.bo.wrap = false
 
 vim.o.autoread = true
 vim.bo.autoread = true
