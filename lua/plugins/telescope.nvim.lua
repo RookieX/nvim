@@ -26,6 +26,7 @@ return {
                     }
                 },
                 dynamic_preview_title = true,
+                file_ignore_patterns = { "^.git/" }
             },
             pickers = {
                 find_files = {
