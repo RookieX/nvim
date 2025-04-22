@@ -60,6 +60,9 @@ return {
             { '≠', ':vertical wincmd =<CR>', description = 'Windows Eqaully', opts = { silent = true } },
             --alt+\
             { '«', ':horizontal wincmd =<CR>', description = 'Windows Eqaully', opts = { silent = true } },
+
+            -- close but open alternate buffer
+            { '<C-w>c', ':bp|bd#<CR>', description = 'Close but open alternate buffer', opts = { silent = true } },
         }
     }
 }
