@@ -1,9 +1,10 @@
+local cap = require('lsp.capabilities')
 lspconfig = require "lspconfig"
 util = require "lspconfig/util"
 
 lspconfig.gopls.setup {
     cmd = { 'gopls', '-remote=auto' },
-    capabilities = require("lsp.capabilities").capabilities(),
+    capabilities = cap.capabilities(),
     settings = {
         gopls = {
             analyses = {
@@ -35,4 +36,4 @@ vim.cmd([[
   augroup end
 ]])
 
--- autocmd BufWritePre *.go lua vim.lsp.buf.format({ sync = false })
+-- autocmd BufWritePre *.go lua vim.lsp.buf.format({ sync = false }) 

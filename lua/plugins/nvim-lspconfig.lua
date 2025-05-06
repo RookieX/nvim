@@ -1,6 +1,7 @@
 -- Configurations for Nvim LSP
 return {
     'neovim/nvim-lspconfig',
+    dependencies = { 'saghen/blink.cmp' },
     config = function()
         -- Use an on_attach function to only map the following keys
         -- after the language server attaches to the current buffer
