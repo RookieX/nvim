@@ -13,7 +13,7 @@ return {
             { '<F3>', ':NvimTreeFindFile<CR>', description = 'Find file in NvimTree', opts = { silent = true } },
 
             -- Telescope
-            { '<C-T>', ':Telescope find_files hidden=true<CR>', description = 'Find files', opts = { silent = true } },
+            { '<C-T>', ':Telescope find_files hidden=true no_ignore=true<CR>', description = 'Find files', opts = { silent = true } },
             -- { '<C-L>', ':Telescope live_grep<CR>',              description = 'Live Grep',  opts = { silent = true } },
             { '<C-L>', function() require("telescope").extensions.live_grep_args.live_grep_args() end, description = 'Live Grep Args', opts = { silent = true } },
             { '<leader>tt', ':Telescope ', description = 'Telescope Command', opts = { silent = false } },
