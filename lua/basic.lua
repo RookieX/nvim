@@ -48,6 +48,7 @@ vim.g.colorscheme = "github_*"
 
 vim.g.python3_host_prog = "~/.virtualenvs/p3/bin/python"
 
+vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
 -- last edit position
 vim.cmd([[
