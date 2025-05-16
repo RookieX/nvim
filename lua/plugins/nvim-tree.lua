@@ -1,39 +1,50 @@
+function openFileWhenCreated(tree)
+    tree.events.subscribe(tree.events.Event.FileCreated, function(file)
+        vim.cmd("edit " .. vim.fn.fnameescape(file.fname))
+    end)
+end
+
 -- explore
 return {
     'nvim-tree/nvim-tree.lua',
     dependencies = {
         'nvim-tree/nvim-web-devicons', -- optional, for file icons
     },
-    opts = {
-        disable_netrw = true,
-        open_on_tab = true,
-        hijack_cursor = true,
+    opts = function()
+        local tree = require("nvim-tree.api")
+        openFileWhenCreated(tree)
 
-        diagnostics = {
-            enable = true,
-            show_on_dirs = true,
-        },
+        return {
+            disable_netrw = true,
+            open_on_tab = true,
+            hijack_cursor = true,
 
-        view = {
-            number = true,
-            relativenumber = true,
-        },
+            diagnostics = {
+                enable = true,
+                show_on_dirs = true,
+            },
 
-        renderer = {
-            highlight_git = true,
-            icons = {
-                show = {
-                    git = true,
+            view = {
+                number = true,
+                relativenumber = true,
+            },
+
+            renderer = {
+                highlight_git = true,
+                icons = {
+                    show = {
+                        git = true,
+                    }
                 }
+            },
+
+            filters = {
+                dotfiles = true,
+            },
+
+            live_filter = {
+                prefix = ':',
             }
-        },
-
-        filters = {
-            dotfiles = true,
-        },
-
-        live_filter = {
-            prefix = ':',
         }
-    }
+    end
 }
