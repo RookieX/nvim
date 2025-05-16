@@ -4,9 +4,10 @@ return {
     "catppuccin/nvim",
     name = "catppuccin",
     priority = 1000,
-    config = function()
+    opts = function()
         local colors = require("catppuccin.palettes").get_palette()
-        require("catppuccin").setup({
+
+        return {
             dim_inactive = {
                 enabled = true,
                 shade = "light",
@@ -50,7 +51,6 @@ return {
                 TSConstant = { fg = colors.sky },
                 TSComment = { fg = colors.surface2, style = { "italic" } }
             },
-        })
-
+        }
     end
 }

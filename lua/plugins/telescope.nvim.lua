@@ -7,10 +7,14 @@ return {
         "nvim-telescope/telescope-ui-select.nvim",
         { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
     },
-    config = function()
+    opts = function()
         local actions = require("telescope.actions")
         local lga_actions = require("telescope-live-grep-args.actions")
-        require("telescope").setup({
+        require("telescope").load_extension("live_grep_args")
+        require("telescope").load_extension("ui-select")
+        require("telescope").load_extension("fzf")
+
+        return {
             defaults = {
                 -- Default configuration for telescope goes here:
                 -- config_key = value,
@@ -82,9 +86,6 @@ return {
                 -- }
                 -- please take a look at the readme of the extension you want to configure
             }
-        })
-        require("telescope").load_extension("live_grep_args")
-        require("telescope").load_extension("ui-select")
-        require("telescope").load_extension("fzf")
+        }
     end
 }
