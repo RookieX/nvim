@@ -1,17 +1,19 @@
 -- treesitter
 return {
     'nvim-treesitter/nvim-treesitter',
-    opts = {
-        highlight = {
-            enable = true,
-        },
+    config = function()
+        require("nvim-treesitter.configs").setup({
+            highlight = {
+                enable = true,
+            },
 
-        incremental_selection = {
-            enable = true,
-        },
+            incremental_selection = {
+                enable = true,
+            },
 
-        indent = {
-            enable = true,
-        }
-    }
+            indent = {
+                enable = true,
+            }
+        })
+    end
 }
