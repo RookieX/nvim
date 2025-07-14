@@ -21,6 +21,7 @@ return {
             { '<leader>tb', ':Telescope buffers<CR>', description = 'Buffers', opts = { silent = true } },
             { '<leader>ts', ':Telescope session-lens<CR>', description = 'Sessoins', opts = { silent = true } },
             { '<leader>tf', ':Telescope grep_string<CR>', description = 'Grep string', opts = { silent = true } },
+            { '<leader>td', ':Telescope diagnostics bufnr=0<CR>', description = 'Diagnostics in current buffer', opts = { silent = true } },
 
             -- Trouble
             { '<leader>xt', ':Trouble ', description = 'Trouble', opts = { silent = false } },
