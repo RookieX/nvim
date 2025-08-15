@@ -8,13 +8,14 @@ return {
         vim.api.nvim_create_autocmd('LspAttach', {
             callback = function(args)
                 local bufopts = { noremap = true, silent = true, buffer = bufnr }
+                local funcbufopts = { noremap = true, silent = true, buffer = bufnr, expr = true}
                 vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
                 vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
                 vim.keymap.set('n', 'gl', vim.lsp.buf.type_definition, bufopts)
                 vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
                 vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
                 -- vim.keymap.set('n', 'gn', vim.lsp.buf.rename, bufopts)
-                vim.keymap.set('n', 'gn', ":IncRename ", bufopts)
+                vim.keymap.set('n', 'gn', function() return ":IncRename " .. vim.fn.expand("<cword>") end, funcbufopts)
                 vim.keymap.set('n', 'ga', vim.lsp.buf.code_action, bufopts)
                 vim.keymap.set('n', 'gs', vim.lsp.buf.signature_help, bufopts)
                 vim.keymap.set('n', 'gk', vim.lsp.buf.hover, bufopts)
