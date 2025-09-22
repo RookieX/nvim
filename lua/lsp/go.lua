@@ -1,7 +1,8 @@
-lspconfig = require "lspconfig"
+vim.lsp.enable('gopls')
+
 util = require "lspconfig/util"
 
-lspconfig.gopls.setup {
+vim.lsp.config('gopls',{
     cmd = { 'gopls', '-remote=auto' },
     capabilities = require("lsp.capabilities").capabilities(),
     settings = {
@@ -13,6 +14,7 @@ lspconfig.gopls.setup {
         },
     },
 }
+)
 
 function go_org_imports(wait_ms)
     local params = vim.lsp.util.make_range_params()

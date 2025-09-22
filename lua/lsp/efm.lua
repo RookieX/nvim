@@ -1,4 +1,6 @@
-require('lspconfig').efm.setup {
+vim.lsp.enable('efm')
+
+vim.lsp.config('efm',{
     init_options = {
         documentFormatting = true,
         documentRangeFormatting = true,
@@ -19,3 +21,4 @@ require('lspconfig').efm.setup {
     },
     single_file_support = true
 }
+)
