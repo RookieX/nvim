@@ -64,6 +64,9 @@ return {
 
             -- close but open alternate buffer
             { '<C-w>c', ':bp|bd#<CR>', description = 'Close but open alternate buffer', opts = { silent = true } },
+
+            -- Oil
+            { '<leader>o', ':Oil<CR>', description = 'Oil', opts = { silent = true } },
         }
     }
 }
