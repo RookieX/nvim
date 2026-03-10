@@ -15,7 +15,7 @@ return {
 
         sections = {
             lualine_a = { 'mode' },
-            lualine_b = { 'branch', 'diff', 'diagnostics' },
+            lualine_b = { 'branch', 'diff', 'diagnostics', 'windows' },
             lualine_c = {
                 function()
                     return require('auto-session.lib').current_session_name(true)
