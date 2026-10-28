@@ -39,8 +39,18 @@ vim.o.splitright = true
 vim.o.mouse = 'c'
 
 vim.wo.foldmethod = 'expr'
-vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
+vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 vim.wo.foldlevel = 99
+
+-- Existing sessions can restore the old, expensive folding expression.
+vim.api.nvim_create_autocmd('OptionSet', {
+    pattern = 'foldexpr',
+    callback = function()
+        if vim.wo.foldexpr == 'nvim_treesitter#foldexpr()' then
+            vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+        end
+    end,
+})
 
 vim.o.signcolumn = "auto:3"
 
