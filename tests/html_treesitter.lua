@@ -24,9 +24,6 @@ local function run(code, args)
 end
 local ok, err = pcall(function()
     vim.rpcrequest(child, "nvim_ui_attach", 100, 30, { rgb = true })
-    if vim.env.NVIM_HTML_TEST_LEGACY == "1" then
-        run([[package.loaded['nvim-treesitter.query_predicates'] = nil; require('nvim-treesitter.query_predicates')]])
-    end
     run([[vim.cmd('enew!'); vim.api.nvim_buf_set_name(0, vim.fn.tempname() .. '.html'); vim.bo.filetype = 'html']])
     local cases = {
         { "module", '<script type="module">const x = 1;</script>', "javascript" },
