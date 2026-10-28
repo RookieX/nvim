@@ -1,5 +1,10 @@
 return {
     'saghen/blink.cmp',
+    init = function()
+        vim.keymap.set('i', '<C-x><C-e>', function()
+            require('blink.cmp').show()
+        end, { desc = 'Show completion' })
+    end,
     -- optional: provides snippets for the snippet source
     dependencies = { {
         "L3MON4D3/LuaSnip",
@@ -40,6 +45,9 @@ return {
         -- See :h blink-cmp-config-keymap for defining your own keymap
         keymap = {
             preset = 'enter',
+            ['<C-space>'] = false,
+            ['<C-l>'] = false,
+            ['<C-g>'] = false,
             ['<Tab>'] = { function(cmp)
                 if cmp.snippet_active() then
                     return cmp.snippet_forward()
